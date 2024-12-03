@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-    <div id="main" className="w-screen h-screen flex items-center justify-center">
+    <div id="main" className="w-screen h-screen flex items-center justify-center mb-28">
       <div id="intro" className="relative w-4/5 h-[90%]">
         <div className="absolute top-5 right-10 flex items-center justify-around z-10 w-28">
           <Link href="mailto:azzpect6571@gmail.com">
@@ -89,13 +89,19 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <div id="projects" className="w-screen border-solid mt-28 mb-28 flex flex-col items-center underline decoration-white">
+    <div id="projects" className="w-screen border-solid mb-28 flex flex-col items-center underline decoration-white relative">
       <h1 className={`text-white text-3xl font-bold ${poppins.className} p-10`}>Projects</h1>
       <div className="flex justify-around w-full">
         {projectData.map((project, index) => {
           return <ProjectCard key={index} title={project.title} desc={project.desc} img={project.img} repoLink={project.repoLink} />
         })}
       </div>
+      <Link href="#main" className="absolute -bottom-14 right-20 rounded-full">
+        <div className="rotater"></div>
+        <div className="bg-primaryBgColor rounded-full">
+          <Image src="/upArrow.svg" alt="Up arrow" width={50} height={50}/>
+        </div>
+      </Link>
     </div>
     </>
   );
@@ -104,13 +110,13 @@ export default function Home() {
 
 function ProjectCard({title, desc, img, repoLink}: {title: string, desc: string, img: string, repoLink: string}) {
   return (
-    <div className="w-[25vw] h-[35vh] project-card relative">
+    <div className="w-[25vw] h-[40vh] project-card relative">
         <div className="rotater"></div>
         <div className="rotater"></div>
       <div className="absolute w-full h-full bg-primaryBgColor p-3 flex flex-col">
-        <h1 className={`text-white text-2xl font-semibold ${poppins.className}`}>{title}</h1>
-        <Link href="/chatApp.png"><Image src={img} alt={title} width={200} height={200} /></Link>
-        <p className={`text-[#9b9b9b] text-xs ${kanit.className}`}>{desc}</p>
+        <h1 className={`text-white text-2xl font-semibold ${poppins.className} py-2`}>{title}</h1>
+        <Link href="/chatApp.png" className="self-center"><Image src={img} alt={title} width={200} height={200} /></Link>
+        <p className={`text-[#9b9b9b] text-xs ${kanit.className} py-2`}>{desc}</p>
         <Link href={repoLink} className={`text-white text-sm font-semibold ${kanit.className} self-end`}>Visit Repository&gt;&gt;</Link>
       </div>
     </div>

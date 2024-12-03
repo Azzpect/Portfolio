@@ -3,7 +3,38 @@
     initial-value: 0deg;
     inherits: false;
 }
-.rotater {
+#projects>a {
+    /* border-color: transparent; */
+}
+#projects>a>.rotater {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #c7b85b);
+    animation: rotate 1s linear infinite;
+    z-index: -1;
+}
+#projects>a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #c7b85b);
+    animation: rotate 1s linear infinite;
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.6;
+}
+.project-card>.rotater {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -13,14 +44,14 @@
     border-radius: 0.4rem;
     animation: rotate 5s linear infinite;
 }
-.rotater:nth-child(1) {
+.project-card>.rotater:nth-child(1) {
     background-image: conic-gradient(from var(--angle), transparent 70%, #c7b85b);
 }
-.rotater:nth-child(2) {
+.project-card>.rotater:nth-child(2) {
     background-image: conic-gradient(from var(--angle), transparent 20%, #615f63, transparent 50%);
 }
 
-.rotater::before{
+.project-card>.rotater::before{
     content: "";
     position: absolute;
     top: 50%;
@@ -33,10 +64,10 @@
     filter: blur(15px);
     opacity: 0.6;
 }
-.rotater:nth-child(1)::before{
+.project-card>.rotater:nth-child(1)::before{
     background-image: conic-gradient(from var(--angle), transparent 70%, #c7b85b);
 }
-.rotater:nth-child(2)::before {
+.project-card>.rotater:nth-child(2)::before {
     background-image: conic-gradient(from var(--angle), transparent 20%, #615f63, transparent 50%);
 }
 
