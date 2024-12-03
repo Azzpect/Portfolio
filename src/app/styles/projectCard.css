@@ -41,7 +41,7 @@
     transform: translate(-50%, -50%);
     width: 103%;
     height: 105%;
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     animation: rotate 5s linear infinite;
 }
 .project-card>.rotater:nth-child(1) {
@@ -60,7 +60,7 @@
     width: 100%;
     height: 100%;
     animation: rotate 5s linear infinite;
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     filter: blur(15px);
     opacity: 0.6;
 }
