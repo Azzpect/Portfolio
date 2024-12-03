@@ -1,7 +1,8 @@
-import "./styles/home.css"
 import Link from "next/link";
 import Image from "next/image";
 import { Poppins, Kanit } from "next/font/google";
+import "./styles/projectCard.css";
+import "./styles/home.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,7 +16,14 @@ const kanit = Kanit({
 })
 
 export default function Home() {
+
+  const projectData: {title: string, desc: string, img: string, repoLink: string}[] = [
+    {title: "ChatAPP", desc: "A real-time chat application built using Node.js, Socket.io, and React.js. The application allows users to chat in real-time with other users also send friend requests and accept them.", img: "/chatApp.png", repoLink: "https://github.com/Azzpect/ChatAPP.git"},
+    {title: "INotesApp", desc: "A note-taking application built using Node.js, Express.js, and React.js. The application allows users to create, edit, and delete notes, and also search for notes by title or content.", img: "/chatApp.png", repoLink: "https://github.com/Azzpect/iNotes.github.io"}
+  ]
+
   return (
+    <>
     <div id="main" className="w-screen h-screen flex items-center justify-center">
       <div id="intro" className="relative w-4/5 h-[90%]">
         <div className="absolute top-5 right-10 flex items-center justify-around z-10 w-28">
@@ -47,8 +55,8 @@ export default function Home() {
             />
           </Link>
         </div>
-        <div className="w-[12rem] h-[12rem] absolute -top-3 -left-3 bg-gradient-to-br from-[#c7b85b] from-0% to-[#68646b] to-50% rounded-xl"></div>
-        <div className="w-[12rem] h-[12rem] absolute -bottom-3 -right-3 bg-gradient-to-tl from-[#c7b85b] from-0% to-[#68646b] to-50% rounded-xl"></div>
+        <div className="w-[12rem] h-[12rem] absolute -top-3 -left-3 bg-gradient-to-br from-[#c7b85b] from-0% to-[#68646b] to-50% rounded-xl corner"></div>
+        <div className="w-[12rem] h-[12rem] absolute -bottom-3 -right-3 bg-gradient-to-tl from-[#c7b85b] from-0% to-[#68646b] to-50% rounded-xl corner"></div>
         <div className="absolute flex items-center justify-around w-full h-full bg-primaryBgColor">
           <div className="p-5 w-3/5 h-2/5 flex flex-col justify-between">
             <h1 className={`text-white font-bold text-7xl px-3 ${poppins.className}`}>Welcome</h1>
@@ -68,11 +76,7 @@ export default function Home() {
               <div className="absolute w-12 h-12 -top-1 -left-1 bg-gradient-to-br from-[#68646b] from-10% to-[#c7b85b] to-55% rounded-lg"></div>
               <div className="w-2/6 flex flex-col justify-around p-5 absolute bg-primaryBgColor">
                 <div className="relative w-full h-5 mb-2">
-                  <Link href="/info" className={`absolute w-full h-full bg-primaryBgColor z-10 text-[#9b9b9b] text-sm ${kanit.className}`}>Details</Link>
-                  <div className="absolute w-4/5 h-2 -bottom-[2px] bg-gradient-to-r from-[#68646b] from-30% to-[#c7b85b]"></div>
-                </div>
-                <div className="relative w-full h-5 mb-2">
-                  <Link href="/projects" className={`absolute w-full h-full bg-primaryBgColor z-10 text-[#9b9b9b] text-sm ${kanit.className}`}>Projects</Link>
+                  <Link href="#projects" className={`absolute w-full h-full bg-primaryBgColor z-10 text-[#9b9b9b] text-sm ${kanit.className}`}>Projects</Link>
                   <div className="absolute w-full h-2 -bottom-[2px] bg-gradient-to-r from-[#68646b] from-30% to-[#c7b85b]"></div>
                 </div>
                 <div className="relative w-full h-5 mb-2">
@@ -85,5 +89,30 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <div id="projects" className="w-screen border-solid mt-28 mb-28 flex flex-col items-center underline decoration-white">
+      <h1 className={`text-white text-3xl font-bold ${poppins.className} p-10`}>Projects</h1>
+      <div className="flex justify-around w-full">
+        {projectData.map((project, index) => {
+          return <ProjectCard key={index} title={project.title} desc={project.desc} img={project.img} repoLink={project.repoLink} />
+        })}
+      </div>
+    </div>
+    </>
   );
+}
+
+
+function ProjectCard({title, desc, img, repoLink}: {title: string, desc: string, img: string, repoLink: string}) {
+  return (
+    <div className="w-[25vw] h-[35vh] project-card relative">
+        <div className="rotater"></div>
+        <div className="rotater"></div>
+      <div className="absolute w-full h-full bg-primaryBgColor p-3 flex flex-col">
+        <h1 className={`text-white text-2xl font-semibold ${poppins.className}`}>{title}</h1>
+        <Link href="/chatApp.png"><Image src={img} alt={title} width={200} height={200} /></Link>
+        <p className={`text-[#9b9b9b] text-xs ${kanit.className}`}>{desc}</p>
+        <Link href={repoLink} className={`text-white text-sm font-semibold ${kanit.className} self-end`}>Visit Repository&gt;&gt;</Link>
+      </div>
+    </div>
+  )
 }

@@ -5,3 +5,10 @@
 :root {
   --primary-bg-color: #171717
 }
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-y: hidden;
+}
