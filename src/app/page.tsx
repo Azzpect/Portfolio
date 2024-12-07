@@ -20,12 +20,13 @@ export default function Home() {
   const projectData: {title: string, desc: string, img: string, repoLink: string}[] = [
     {title: "ChatAPP", desc: "A real-time chat application built using Node.js, Socket.io, and React.js. The application allows users to chat in real-time with other users also send friend requests and accept them.", img: "/chatApp.png", repoLink: "https://github.com/Azzpect/ChatAPP"},
     {title: "INotesApp", desc: "A note-taking application built using Node.js, Express.js, and React.js. The application allows users to create, edit, and delete notes, and also search for notes by title or content.", img: "/inotesApp.png", repoLink: "https://github.com/Azzpect/iNotes.github.io"}, 
-    {title: "WeatherApp", desc: "A weather application built using React.js. The application allows users to search for weather information by city name.", img: "/weatherApp.png", repoLink: "https://github.com/Azzpect/WeatherApp"}
+    {title: "WeatherApp", desc: "A weather application built using React.js. The application allows users to search for weather information by city name.", img: "/weatherApp.png", repoLink: "https://github.com/Azzpect/WeatherApp"},
+    {title: "Youtube Media Downloader", desc: "A media downloader application built using React, Node.js and WebSocket. The application allows users to search for videos on YouTube and download them in different formats.", img: "/youtubeMediaDownloader.png", repoLink: "https://github.com/Azzpect/Youtube-Media-Downloader"}
   ]
 
   return (
     <>
-    <div id="main" className="w-screen h-screen flex items-center justify-center mb-28">
+    <div id="main" className="w-screen h-screen flex items-center justify-center">
       <div id="intro" className="relative w-4/5 h-[90%]">
         <div className="absolute top-5 right-10 flex items-center justify-around z-10 w-28">
           <Link href="mailto:azzpect6571@gmail.com">
@@ -92,12 +93,12 @@ export default function Home() {
     </div>
     <div id="projects" className="w-screen border-solid mb-28 flex flex-col flex-wrap items-center underline decoration-white relative">
       <h1 className={`text-white text-3xl font-bold ${poppins.className} p-10`}>Projects</h1>
-      <div className="flex justify-around w-full">
+      <div className="flex justify-around w-full max-h-[80vh] flex-wrap overflow-y-scroll pb-10">
         {projectData.map((project, index) => {
           return <ProjectCard key={index} title={project.title} desc={project.desc} img={project.img} repoLink={project.repoLink} />
         })}
       </div>
-      <Link href="#main" className="absolute -bottom-14 right-20 rounded-full z-20">
+      <Link href="#main" className="absolute bottom-14 right-20 rounded-full z-20">
         <div className="rotater"></div>
         <div className="bg-primaryBgColor rounded-full">
           <Image src="/upArrow.svg" alt="Up arrow" width={50} height={50}/>
@@ -111,7 +112,7 @@ export default function Home() {
 
 function ProjectCard({title, desc, img, repoLink}: {title: string, desc: string, img: string, repoLink: string}) {
   return (
-    <div className="w-[25vw] h-[40vh] project-card relative">
+    <div className="w-[30vw] h-[40vh] project-card relative my-5">
         <div className="rotater"></div>
         <div className="rotater"></div>
       <div className="absolute w-full h-full bg-primaryBgColor p-3 flex flex-col">
