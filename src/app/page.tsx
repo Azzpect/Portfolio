@@ -65,9 +65,11 @@ export default function Home() {
             <div className="py-3 px-2 relative w-full h-2/3">
               <div className="absolute top-1/2 -translate-y-1/2 -left-[3px] w-10 h-4/5 bg-gradient-to-b from-[#68646b] from-30% to-[#c7b85b]"></div>
               <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-primaryBgColor">
-                <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga architecto reiciendis quasi aut, cum rem saepe. Repellat, voluptatibus rem porro repellendus omnis dolorem consequuntur aut nulla necessitatibus quo, aspernatur maiores vero quis voluptate labore blanditiis! 
+                <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
+                    My name is Atanu Ghosh. I am a Full Stack Developer. I love to solve problems and learning new technologies. So, try to keep myself in touch with bleeding edge technologies.
                 </p>
-                <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>mnis dolorem consequuntur aut nulla necessitatibus quo, aspernatur maiores vero quis voluptate labore blanditiis! Eum fugiat, ab perferendis nam labore, et non nihil sed inventore, provident ea deserunt maiores?
+                <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
+                  Programming is like an addiction to me. I love to do programming. As for my second most favourite thing, it is gaming whether it is pc or mobile. Gaming helps me clear my mind which eventually helps in better problem solving in other fields of my daily life.
                 </p>
               </div>
             </div>
