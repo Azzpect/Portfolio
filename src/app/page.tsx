@@ -69,7 +69,7 @@ export default function Home() {
                     My name is Atanu Ghosh. I am a Full Stack Developer and tech enthusiast. I love to solve problems and lear new technologies to keep myself in touch with bleeding edge technologies.
                 </p>
                 <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
-                    I like recreating tools and apps. If I am not doing programming, I like to explore new and unknown technologies or systems. I try to constantly learn new things as it's like a habit to me.
+                    I like recreating tools and apps. If I am not doing programming, I like to explore new and unknown technologies or systems. I try to constantly learn new things as it is like a habit to me.
                 </p>
               </div>
             </div>
