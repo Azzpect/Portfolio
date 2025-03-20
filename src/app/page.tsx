@@ -63,13 +63,13 @@ export default function Home() {
           <div className="p-5 w-3/5 h-2/5 flex flex-col justify-between">
             <h1 className={`text-white font-bold text-7xl px-3 ${poppins.className}`}>Welcome</h1>
             <div className="py-3 px-2 relative w-full h-2/3">
-              <div className="absolute top-1/2 -translate-y-1/2 -left-[3px] w-10 h-4/5 bg-gradient-to-b from-[#68646b] from-30% to-[#c7b85b]"></div>
+              <div className="absolute top-1/2 -translate-y-1/2 -left-[3px] w-10 h-3/5 bg-gradient-to-b from-[#68646b] from-30% to-[#c7b85b]"></div>
               <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-primaryBgColor">
                 <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
-                    My name is Atanu Ghosh. I am a Full Stack Developer. I love to solve problems and learning new technologies. So, try to keep myself in touch with bleeding edge technologies.
+                    My name is Atanu Ghosh. I am a Full Stack Developer and tech enthusiast. I love to solve problems and lear new technologies to keep myself in touch with bleeding edge technologies.
                 </p>
                 <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
-                  Programming is like an addiction to me. I love to do programming. As for my second most favourite thing, it is gaming whether it is pc or mobile. Gaming helps me clear my mind which eventually helps in better problem solving in other fields of my daily life.
+                    I like recreating tools and apps. If I am not doing programming, I like to explore new and unknown technologies or systems. I try to constantly learn new things as it's like a habit to me.
                 </p>
               </div>
             </div>
@@ -82,10 +82,6 @@ export default function Home() {
                 <div className="relative w-full h-5 mb-2">
                   <Link href="#projects" className={`absolute w-full h-full bg-primaryBgColor z-10 text-[#9b9b9b] text-sm ${kanit.className}`}>Projects</Link>
                   <div className="absolute w-full h-2 -bottom-[2px] bg-gradient-to-r from-[#68646b] from-30% to-[#c7b85b]"></div>
-                </div>
-                <div className="relative w-full h-5 mb-2">
-                  <Link href="/resume" className={`absolute w-full h-full bg-primaryBgColor z-10 text-[#9b9b9b] text-sm ${kanit.className}`}>Resume</Link>
-                  <div className="absolute w-[90%] h-2 -bottom-[2px] bg-gradient-to-r from-[#68646b] from-30% to-[#c7b85b]"></div>
                 </div>
               </div>
             </div>
