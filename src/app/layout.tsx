@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-primaryBgColor`}
+        className={`antialiased bg-primaryBgColor md:overflow-y-hidden`}
       >
         {children}
       </body>

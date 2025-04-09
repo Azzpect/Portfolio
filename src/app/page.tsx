@@ -26,10 +26,10 @@ export default function Home() {
 
   return (
     <>
-    <div id="main" className="w-screen h-screen flex items-center justify-center">
+    <div id="main" className="w-screen h-[50vh] md:h-screen flex items-center justify-center">
       <div id="intro" className="relative w-4/5 h-[90%]">
-        <div className="absolute top-5 right-10 flex items-center justify-around z-10 w-28">
-          <Link href="mailto:azzpect6571@gmail.com">
+        <div className="absolute top-5 right-5 md:right-10 flex items-center justify-around z-10 w-[4rem] md:w-28">
+          <Link href="mailto:contact@azzpect.tech">
             <Image 
               src="/gmail.svg"
               width={40}
@@ -60,11 +60,11 @@ export default function Home() {
         <div className="w-[12rem] h-[12rem] absolute -top-3 -left-3 bg-gradient-to-br from-[#c7b85b] from-0% to-[#68646b] to-50% rounded-xl corner"></div>
         <div className="w-[12rem] h-[12rem] absolute -bottom-3 -right-3 bg-gradient-to-tl from-[#c7b85b] from-0% to-[#68646b] to-50% rounded-xl corner"></div>
         <div className="absolute flex items-center justify-around w-full h-full bg-primaryBgColor">
-          <div className="p-5 w-3/5 h-2/5 flex flex-col justify-between">
-            <h1 className={`text-white font-bold text-7xl px-3 ${poppins.className}`}>Welcome</h1>
+          <div className="p-5 w-full md:w-3/5 h-[80%] md:h-2/5 flex flex-col justify-between">
+            <h1 className={`text-white font-bold text-4xl px-3 ${poppins.className}`}>Welcome</h1>
             <div className="py-3 px-2 relative w-full h-2/3">
               <div className="absolute top-1/2 -translate-y-1/2 -left-[3px] w-10 h-3/5 bg-gradient-to-b from-[#68646b] from-30% to-[#c7b85b]"></div>
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-primaryBgColor">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-primaryBgColor h-[90%] flex flex-col justify-center">
                 <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
                     My name is Atanu Ghosh. I am a Full Stack Developer and tech enthusiast. I love to solve problems and lear new technologies to keep myself in touch with bleeding edge technologies.
                 </p>
@@ -74,7 +74,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div id="index" className="w-1/3">
+          <div id="index" className="w-1/3 hidden md:block">
             <h2 className={`text-[#9b9b9b] text-xl ${poppins.className}`}>Navigate</h2>
             <div className="relative w-full mt-5">
               <div className="absolute w-12 h-12 -top-1 -left-1 bg-gradient-to-br from-[#68646b] from-10% to-[#c7b85b] to-55% rounded-lg"></div>
@@ -89,14 +89,14 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <div id="projects" className="w-screen border-solid mb-28 flex flex-col flex-wrap items-center underline decoration-white relative">
+    <div id="projects" className="w-screen border-solid mb-28 mt-[5rem] md:mt-0 flex flex-col flex-wrap items-center underline decoration-white relative">
       <h1 className={`text-white text-3xl font-bold ${poppins.className} p-10`}>Projects</h1>
-      <div className="flex justify-around w-full max-h-[80vh] flex-wrap overflow-y-scroll pb-10">
+      <div className="flex justify-around w-full max-h-[80vh] flex-wrap gap-1 overflow-y-scroll pb-10">
         {projectData.map((project, index) => {
           return <ProjectCard key={index} title={project.title} desc={project.desc} img={project.img} repoLink={project.repoLink} />
         })}
       </div>
-      <Link href="#main" className="absolute bottom-14 right-20 rounded-full z-20">
+      <Link href="#main" className="absolute bottom-14 right-20 rounded-full z-20 hidden md:block">
         <div className="rotater"></div>
         <div className="bg-primaryBgColor rounded-full">
           <Image src="/upArrow.svg" alt="Up arrow" width={50} height={50}/>
@@ -110,7 +110,7 @@ export default function Home() {
 
 function ProjectCard({title, desc, img, repoLink}: {title: string, desc: string, img: string, repoLink: string}) {
   return (
-    <div className="w-[30vw] h-[40vh] project-card relative my-5">
+    <div className="w-[90vw] md:w-[25vw] h-[30vh] project-card relative my-5">
         <div className="rotater"></div>
         <div className="rotater"></div>
       <div className="absolute w-full h-full bg-primaryBgColor p-3 flex flex-col">
