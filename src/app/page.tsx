@@ -21,7 +21,8 @@ export default function Home() {
     {title: "ChatAPP", desc: "A real-time chat application built using Node.js, Socket.io, and React.js. The application allows users to chat in real-time with other users also send friend requests and accept them.", img: "/chatApp.png", repoLink: "https://github.com/Azzpect/ChatAPP"},
     {title: "INotesApp", desc: "A note-taking application built using Node.js, Express.js, and React.js. The application allows users to create, edit, and delete notes, and also search for notes by title or content.", img: "/inotesApp.png", repoLink: "https://github.com/Azzpect/iNotes.github.io"}, 
     {title: "WeatherApp", desc: "A weather application built using React.js. The application allows users to search for weather information by city name.", img: "/weatherApp.png", repoLink: "https://github.com/Azzpect/WeatherApp"},
-    {title: "Youtube Media Downloader", desc: "A media downloader application built using React, Node.js and WebSocket. The application allows users to search for videos on YouTube and download them in different formats.", img: "/youtubeMediaDownloader.png", repoLink: "https://github.com/Azzpect/Youtube-Media-Downloader"}
+    {title: "Youtube Media Downloader", desc: "A media downloader application built using React, Node.js and WebSocket. The application allows users to search for videos on YouTube and download them in different formats.", img: "/youtubeMediaDownloader.png", repoLink: "https://github.com/Azzpect/Youtube-Media-Downloader"},
+    {title: "Streaming APP", desc: "A media serving application built using React.js and GO. This application makes all the media files in the host machine available over the local network.", img: "/streaming.png", repoLink: "https://github.com/Azzpect/Streaming"}
   ]
 
   return (
@@ -66,10 +67,10 @@ export default function Home() {
               <div className="absolute top-1/2 -translate-y-1/2 -left-[3px] w-10 h-3/5 bg-gradient-to-b from-[#68646b] from-30% to-[#c7b85b]"></div>
               <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-primaryBgColor h-[90%] flex flex-col justify-center">
                 <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
-                    My name is Atanu Ghosh. I am a Full Stack Developer and tech enthusiast. I love to solve problems and lear new technologies to keep myself in touch with bleeding edge technologies.
+                    My name is Atanu Ghosh. I am a Full Stack Developer and tech enthusiast. I love to solve problems and learn new technologies to keep myself in touch with bleeding edge technologies.
                 </p>
                 <p className={`text-[#9b9b9b] text-xs py-2 px-5 ${kanit.className}`}>
-                    I like recreating tools and apps. If I am not doing programming, I like to explore new and unknown technologies or systems. I try to constantly learn new things as it is like a habit to me.
+                    I like recreating tools and apps. Most of my projects are created for my everyday use. If I am not doing programming, I like to explore new and unknown technologies or systems. I try to constantly learn new things as it is like a habit to me.
                 </p>
               </div>
             </div>
